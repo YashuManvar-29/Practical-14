@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quiz Application</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="quiz-container">
+
+<!-- ===== SCREEN 1: Cover / Start Page ===== -->
+<div id="cover-screen">
+<div class="cover-icon">C˛*</div>
+<h1 class="cover-title">General Knowledge Quiz</h1>
+<p class="cover-subtitle">Test your knowledge with 10 exciting questions!</p>
+<ul class="cover-rules">
+<li>−–¯ ,|⬛ &nbsp;10 Multiple Choice Questions</li>
+<li>⬛   &nbsp;Select one answer per question</li>
+<li>’´±'ç_ &nbsp;See your score at the end</li>
+</ul>
+<button class="start-btn" onclick="startQuiz()">Start Quiz &rarr;</button>
+</div>
+
+<!-- ===== SCREEN 2: Quiz Questions ===== -->
+<div id="quiz-screen" class="hidden">
+<h2 class="quiz-title">General Knowledge Quiz</h2>
+
+<!-- Progress bar -->
+<div class="progress-bar-bg">
+<div id="progress-bar" class="progress-bar"></div>
+</div>
+<!-- Question counter -->
+<p id="question-counter" class="question-counter">Question 1 of 10</p>
+ 
+
+<!-- Question text -->
+<p id="question-text" class="question-text">Question goes here</p>
+<!-- Four answer buttons -->
+<div id="options-container" class="options-container">
+<button class="option-btn" onclick="selectAnswer(0)"></button>
+<button class="option-btn" onclick="selectAnswer(1)"></button>
+<button class="option-btn" onclick="selectAnswer(2)"></button>
+<button class="option-btn" onclick="selectAnswer(3)"></button>
+</div>
+<!-- Warning if no answer selected -->
+<p id="warning-msg" class="warning-msg">ı . Please select an answer first!</p>
+
+<!-- Next button -->
+<button id="next-btn" class="next-btn" onclick="nextQuestion()">Next &rarr;</button>
+</div>
+
+<!-- ===== SCREEN 3: Result Page ===== -->
+<div id="result-screen" class="hidden">
+<div id="result-icon" class="result-icon"></div>
+<h1 class="quiz-title">Quiz Completed!</h1>
+<p id="score-text" class="score-text"></p>
+<div id="score-bar-bg" class="score-bar-bg">
+<div id="score-bar" class="score-bar"></div>
+</div>
+<p id="result-msg" class="result-msg"></p>
+<button class="restart-btn" onclick="restartQuiz()">⬛³– Play Again</button>
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
